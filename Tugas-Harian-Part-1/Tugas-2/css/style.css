@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url("pattern.jpg")
+}
+
+header {
+  background-color: #fff;
+}
+
+header nav ul {
+  float: right;
+}
+
+header nav ul li {
+  padding: 0 10px 0 5px;
+  display: inline-block;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+section {
+  background-color: #fff;
+  margin: auto;
+  width: 70%;
+}
+
+section h1{
+  text-align: center;
+}
+
+#article-list {
+  padding: 0 10px 10px 10px;
+}
+
+#article-list p {
+  margin: 0 0 40px 0;
+}
+
+footer {
+  height: 30px;
+  background-color: #000;
+  color: #fff
+}
+
+footer h5 {
+  text-align: center;
+}
