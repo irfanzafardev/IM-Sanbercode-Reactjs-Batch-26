@@ -96,3 +96,18 @@ let bukuSummary = {
 };
 
 console.log(bukuSummary);
+
+let stationaries = [
+	"Semangka",
+	"jeruk",
+	"mangga",
+	"strawberry",
+	"nangka",
+	"salak",
+];
+
+const arr = [1, 2, 3, 4, 5];
+
+const [a, b, , , c] = arr;
+
+console.log(c);
