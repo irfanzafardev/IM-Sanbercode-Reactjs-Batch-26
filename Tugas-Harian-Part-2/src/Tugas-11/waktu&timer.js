@@ -1,53 +1,60 @@
 import React, { Component } from "react";
 
-class WaktuDanTimer extends Component {
+class Timer extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			time: 100,
 			date: new Date(),
+			visibleTime: true,
 		};
 	}
 
 	componentDidMount() {
-		this.hitungmundur = setInterval(() => this.hitungMundurTimer(), 1000);
+		if (this.props.start !== undefined) {
+			this.setState({ time: this.props.start });
+		}
+		this.timerID = setInterval(() => this.tick(), 1000);
+	}
+
+	componentDidUpdate() {
+		if (this.state.visibleTime === true) {
+			if (this.state.time <= 0) {
+				this.setState({ visibleTime: false });
+			}
+		}
 	}
 
 	componentWillUnmount() {
-		clearInterval(this.hitungmundur);
+		clearInterval(this.timerID);
 	}
 
-	hitungMundurTimer() {
-		if (this.state.time > 0) {
-			this.setState({
-				time: this.state.time - 1,
-				date: new Date(),
-			});
-		} else {
-			clearInterval(1000);
-		}
+	tick() {
+		this.setState({
+			time: this.state.time - 1,
+			date: new Date(),
+		});
 	}
 
 	render() {
 		return (
-			<>
-				{this.state.time > 0 ? (
+			<div style={{ width: "80%", margin: "0 auto" }}>
+				{this.state.visibleTime && (
 					<>
-						<div className="component-timer">
-							<div className="component-timer-date">
-								<h1 className="date">{this.state.date.toLocaleTimeString()}</h1>
-							</div>
-							<div className="component-timer-timer">
-								<h1 className="timer">{this.state.time}</h1>
-							</div>
-						</div>
+						<h1 style={{ textAlign: "center" }}>Tugas 11</h1>
+						<header style={{ marginBottom: "30px" }} className="App-header">
+							<h1 style={{ float: "left" }}>
+								Sekarang jam - {this.state.date.toLocaleTimeString()}.
+							</h1>
+							<h1 style={{ float: "right" }}>
+								hitung Mundur: {this.state.time}
+							</h1>
+						</header>
 					</>
-				) : (
-					<></>
 				)}
-			</>
+			</div>
 		);
 	}
 }
 
-export default WaktuDanTimer;
+export default Timer;

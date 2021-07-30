@@ -54,16 +54,33 @@ th, td {
   padding: 4px 30px 4px 1px;
 }
 
-
-.App-link {
-  color: #61dafb;
+nav.navbar {
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #a3a3a3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
 }
+
+nav.navbar li {
+  float: left;
+}
+
+nav.navbar li a {
+  display: block;
+  color: #a6a6a6;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav.navbar li a:hover {
+  background-color: #111;
+}
+

@@ -77,6 +77,7 @@ class DaftarBuah extends React.Component {
 	render() {
 		return (
 			<header className="App-header">
+				<h1 style={{ textAlign: "center" }}>Tugas 10</h1>
 				<h1>Tabel Harga Buah</h1>
 				<table className="tableHargaBuah">
 					<tr>

@@ -4,6 +4,7 @@ class FormBuah extends React.Component {
 	render() {
 		return (
 			<header className="App-header">
+				<h1 style={{ textAlign: "center" }}>Tugas 9</h1>
 				<div
 					className="FormBuah"
 					style={{
