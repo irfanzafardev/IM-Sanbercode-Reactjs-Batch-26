@@ -1,14 +1,11 @@
 import React from "react";
 
-import Routes from "./Tugas-15/routes";
+import Main from "./Tugas-16/main";
 import "./App.css";
+import "antd/dist/antd.css";
 
 function App() {
-	return (
-		<div className="App">
-			<Routes />
-		</div>
-	);
+	return <Main />;
 }
 
 export default App;
